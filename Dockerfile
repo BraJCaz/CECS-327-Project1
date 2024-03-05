@@ -1,6 +1,8 @@
-FROM node:19-alpine 
+FROM python:latest
 
-COPY package.json /app/
-COPY src /app/
+COPY . /app
+RUN pip install app/requirements.txt
 
-WORKDIR /app
+WORKDIR /app 
+
+CMD ["pyhton", "-m" ,"cecs327project1"]
