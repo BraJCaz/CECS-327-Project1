@@ -1,5 +1,6 @@
-## Brandon Cazares and Meraj Nushin 
-## CECS 327 Sec 2 Project 1 
+## Brandon Cazares - 025775800
+## Meraj Nushin - 029155839
+## CECS 327 Sec 2 Project 1 : A Bite of Distributed Communication 
 ## For this project, we're going to use Docker to create 4 nodes and create a distributed network with our master server  
 ## As our protocols, we're going to do broadcast and unicast design  
 
