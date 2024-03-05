@@ -3,8 +3,9 @@
 ## For this project, we're going to use Docker to create 4 nodes and create a distributed network with our master server  
 ## As our protocols, we're going to do broadcast and unicast design  
 
-# As for our sources, we used StackOverflow and 
-# 
+# As for our sources, we used StackOverflow and phpBB (forum software)
+## https://stackoverflow.com/questions/65709087/is-there-a-way-to-distinguish-unicast-and-multicast-when-receiving-udp-datagram
+## https://forums.naturalpoint.com/viewtopic.php?t=13472
 ## Unicast code 
 import socket as socket 
 import struct as struct 
