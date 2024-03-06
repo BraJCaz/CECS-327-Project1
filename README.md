@@ -1,4 +1,4 @@
-# CECS-327-Project1
+# CECS-327-Project1 Brandon Cazares and Meraj Nushin 
 
 For our Project 1, we're going to build a small distibuted system with a master server and 4 different nodes 
 
@@ -19,4 +19,6 @@ Some important docker commands to know are:
 8. docker scout
 9. docker version
 
-To download docker, 
+To understand how to code this project, we need a basic understanding of programming language, familiarity with Docker containers and Linux terminal commands along with a basic understanding of IP addresses, nodes, sockets and networking. 
+
+
