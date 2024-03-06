@@ -1,8 +1,9 @@
 FROM python:latest
 
-COPY . /app
-RUN pip install app/requirements.txt
+WORKDIR /app
 
-WORKDIR /app 
+COPY . .
+RUN pip install -r requirements.txt
 
-CMD ["pyhton", "-m" ,"cecs327project1"]
+
+CMD ["pyhton", "server.py"]
