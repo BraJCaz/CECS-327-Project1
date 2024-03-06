@@ -1,1 +1,20 @@
+# These are our references 
+# https://auth0.com/blog/use-docker-to-create-a-node-development-environment/
+# https://stackoverflow.com/questions/38355850/how-do-you-set-up-an-elastic-search-cluster-with-multiple-master-nodes-in-docker
 
+version: '3'
+services: 
+  master:
+    build: 
+      context:
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # this is for both broadcast and unicast 
+    node1:
+      build: ./server
+    node2:
+      build: ./server
+    node3:
+      build: ./server 
+    node4:
+      build: ./server
