@@ -16,7 +16,7 @@ def send_mess_to_server(host, port, mess):
 if __name__ == "__main__":
     if len(sys.argv) < 4:
         print("Usage: python file simple_client.py HOST WILL PORT MESSAGE")
-        sys.exit(1)
+        #sys.exit(1)
 
     # then, we need both our host and port to send our message to our server 
         host, port, mess = sys.argv[1], int(sys.argv[2]), sys.argv[3]
