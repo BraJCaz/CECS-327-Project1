@@ -21,4 +21,9 @@ Some important docker commands to know are:
 
 To understand how to code this project, we need a basic understanding of programming language, familiarity with Docker containers and Linux terminal commands along with a basic understanding of IP addresses, nodes, sockets and networking. 
 
+For Step 1, we'll start this up by creating a container of a master server with 4 nodes with both Python code and Docker containers because those are necessary to create a distributed network with Docker 
+
+We need to use this command: docker container ls because 
+
+For Step 2, 
 
