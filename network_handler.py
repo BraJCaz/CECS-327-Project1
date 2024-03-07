@@ -4,7 +4,7 @@
 # https://codereview.stackexchange.com/questions/128525/server-connection-handler-in-python
 import socket 
 
-class NetworkHanlder: 
+class NetworkHandler: 
     # this is our init with our port address 
     def __init__(s, host='', port=8000):
         s.host = host 
