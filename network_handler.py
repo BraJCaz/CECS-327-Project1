@@ -1,4 +1,7 @@
 # This is our network handler code 
+# These are our references: 
+# https://realpython.com/python-sockets/
+# https://codereview.stackexchange.com/questions/128525/server-connection-handler-in-python
 import socket 
 
 class NetworkHanlder: 
