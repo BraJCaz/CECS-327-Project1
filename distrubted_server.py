@@ -1,4 +1,6 @@
-# we are first importing our socker in our distributed server 
+# we are first importing our socket in our distributed server
+# these are our references: 
+# https://stackoverflow.com/questions/48767851/making-a-distributed-computing-network-in-python
 import socket 
 
 ## This is our distributed server as a class 
