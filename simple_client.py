@@ -1,4 +1,7 @@
-# this is our client file to test our network connection 
+# this is our simple client file to test our network connection 
+# these are our references: 
+# https://stackoverflow.com/questions/46775320/simple-python-server-client-file-transfer
+# https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client
 import socket 
 import sys 
 
