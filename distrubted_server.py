@@ -4,7 +4,7 @@
 import socket 
 
 ## This is our distributed server as a class 
-class distributedserver:
+class DistributedServer:
 
     # now, we need to define both our host and port 
     def __intit__(s, host='', port=8000):
@@ -42,7 +42,7 @@ class distributedserver:
 
     ## this is our main code to test our distributed server code 
     if __name__ == "__main__":
-        s = distributedserver(port=8000)
+        s = DistributedServer(port=8001)
         s.run()
 
 
