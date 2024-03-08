@@ -10,7 +10,7 @@ logging.basicConfig(filename='project.log', level=logging.DEBUG,
 # this will start our server 
 def start_server(port):
     "This will initialixed and run the distributed server on the port we're going to use."
-    s = distributedserver(port=port)
+    s = DistributedServer(port=port)
     s.run() 
 
 # this is our main code 
