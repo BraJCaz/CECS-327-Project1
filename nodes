@@ -21,11 +21,7 @@ services:
     # this is our second node 
     node2:
       build: 
-<<<<<<< HEAD
         context: s
-=======
-        context: 
->>>>>>> 8ebf020 (<comments)
         dockerfile: simple_client 
       depends_on:
       - master 
