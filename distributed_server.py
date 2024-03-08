@@ -22,7 +22,7 @@ class DistributedServer:
     # we need to handle our client from our starting server 
     def handle_client(self, client_socket):
         # This will define our logic to make sure our incoming client connections and messages 
-        message = client_socket.recveiver(1024).decode()
+        message = client_socket.recv(1024).decode()
         print(f"Message received: {message}")
 
         # this sends back a confirmation message 

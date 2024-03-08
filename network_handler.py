@@ -17,7 +17,7 @@ class NetworkHandler:
         print(f"Network is listening {s.host}:{s.port}")
     # this makes sure our connection's accepted 
     def connection_accepted(s):
-        client_socket, address = self.socket.accept()
+        client_socket, address = s.socket.accept()
         return client_socket, address 
     # this makes sure our message is fully sent 
     def send(s, client_socket, m):
