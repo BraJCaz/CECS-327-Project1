@@ -26,6 +26,14 @@ services:
       depends_on:
       - master 
     node3:
-      build: ./server 
+      build:
+        context:
+        dockerfile: simple_client
+      depends_on:
+      - master
     node4:
-      build: ./server
+      build:
+        context: 
+        dockerfile: simple_client 
+      depends_on: 
+      - master s
