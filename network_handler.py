@@ -25,11 +25,11 @@ class NetworkHandler:
     # this checks if our message is received 
     def receive(self, client_socket, buffer_size=1024):
         return client_socket.recv(buffer_size).decode()
-    # this is our broadcast handler because that's our first protocol we chose 
+    # this is our broadcast handler because that's our first protocol that we chose 
     def broadcast(self, message, all_nodes):
         for node in all_nodes:
-            self.send(node, message) 
-    # anycast is usede for both our protocols: broadcast and unicast
+            self.send(node, message)
+    # anycast is used for both our protocols: broadcast and unicast 
     def anycast(self, message, optimal_node):
         self.send(optimal_node, message)
     # we're not doing multicast for this project 
