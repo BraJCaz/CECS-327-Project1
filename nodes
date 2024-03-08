@@ -36,4 +36,4 @@ services:
         context: 
         dockerfile: simple_client 
       depends_on: 
-      - master s
+      - master
