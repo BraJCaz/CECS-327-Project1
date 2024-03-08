@@ -11,10 +11,10 @@ import sys
 #m = [f"Message 1 sent to client.", f"Message 2 sent to client"]
 
 # we're going to define our sending message to our server 
-def send_mess_to_server(host, port, mess):
+def send_mess_to_server(host, port, message):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((host, port))
-        s.sendall(mess.encode())
+        s.sendall(message.encode())
         data = s.receive(1024)
 
     ## this will print our receieved message from the server 
@@ -28,5 +28,5 @@ if __name__ == "__main__":
         #sys.exit(1)
 
     # then, we need both our host and port to send our message to our server 
-        host, port, mess = sys.argv[1], int(sys.argv[2]), sys.argv[3]
-        send_mess_to_server(host, port, mess)
+        host, port, message = sys.argv[1], int(sys.argv[2]), sys.argv[3]
+        send_mess_to_server(host, port, message)
