@@ -5,13 +5,13 @@ import logging
 
 # This will configure logging 
 logging.basicConfig(filename='project.log', level=logging.DEBUG, 
-                    format='%a(asctime)s - %(levelname)s - %(message)s')
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # this will start our server 
 def start_server(port):
     "This will initialixed and run the distributed server on the port we're going to use."
-    s = DistributedServer(port=port)
-    s.run() 
+    server = DistributedServer(port=port)
+    server.run() 
 
 # this is our main code 
 def main(): 
