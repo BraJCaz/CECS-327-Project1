@@ -4,11 +4,11 @@
 # https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client
 import socket 
 import sys 
-import selectors 
-import types 
+#import selectors 
+#import types 
 
-sel = selectors.DefaultSelector() 
-m = [f"Message 1 sent to client.", f"Message 2 sent to client"]
+#sel = selectors.DefaultSelector() 
+#m = [f"Message 1 sent to client.", f"Message 2 sent to client"]
 
 # we're going to define our sending message to our server 
 def send_mess_to_server(host, port, mess):
