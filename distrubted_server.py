@@ -7,7 +7,7 @@ import socket
 class DistributedServer:
 
     # now, we need to define both our host and port 
-    def __intit__(self, host='', port=8000):
+    def __init__(self, host='', port=8000):
         self.host = host
         self.port = port 
         self.server_socket = None 
