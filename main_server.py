@@ -1,6 +1,6 @@
 # this is our main server file 
 import argparse
-from distrubted_server import distributedserver
+from distrubted_server import DistributedServer
 import logging 
 
 # This will configure logging 
