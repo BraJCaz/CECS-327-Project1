@@ -1,4 +1,7 @@
 # this is our main server file 
+# these are our references:
+# https://stackabuse.com/serving-files-with-pythons-simplehttpserver-module/
+# https://www.freecodecamp.org/news/simplehttpserver-explained-how-to-send-files-using-python/
 import argparse
 from distributed_server import DistributedServer
 import logging 
