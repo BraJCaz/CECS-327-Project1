@@ -17,8 +17,8 @@ class NetworkHandler:
         
     # this makes sure our connection's accepted 
     def connection_accepted(self):
-        client_socket, address = self.socket.accept()
-        return client_socket, address 
+        c_socket, add = self.socket.accept()
+        return c_socket, add 
     
     # this makes sure our message is fully sent 
     def send(self, client_socket, message):

@@ -22,6 +22,7 @@ def send_message(host, port, message):
     # the message received from the server will be sent to the client 
     print("Message received from server:", data.decode())
 
+# Define the IP address, port number, and the message to start the broadcast
 host = "0.0.0.0"
 port = 12345
 message = "Hello fellow Nodes"

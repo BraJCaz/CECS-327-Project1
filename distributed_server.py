@@ -22,7 +22,7 @@ class DistributedServer:
         # Listens to all addresses simultainiously 
         self.server_socket.listen(8)
         
-        print("Server is starting on " + self.host + ":" + self.port)
+        print("Server is starting on", self.host, ":", self.port)
 
     # The starting server handles the client
     def handle_client(self, c_socket):
