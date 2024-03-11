@@ -6,4 +6,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 
-CMD ["pyhton", "server.py"]
+CMD ["python", "server.py"]
