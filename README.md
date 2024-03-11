@@ -28,3 +28,9 @@ We need to use this command: docker container ls because we need our container t
 For Step 2, we need to choose at least 2 out of 3 protocol designs recommended. We're going to choose broadcast and protocol design for this. 
 
 For Step 3, we're going to track our network by monitoring all our communications with all 4 nodes and master server. 
+
+Brandon's work: 
+distributed_server.py, main_server.py, Dockerfile, CECS 327 Project 1 main code and unicast code
+
+Meraj's work:
+nodes, network_handler.py, simple_client.py, broadcast code and video recording 
