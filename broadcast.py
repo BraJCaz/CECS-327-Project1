@@ -8,19 +8,68 @@
     aspects of system architecture, communication protocols, and network monitoring.
 '''
 
-# import all of these dependencies 
-import socket 
-import struct 
-import sys
+import socket
 
-# Assign these network activities for the broadcast protocol design
-source_ipAddress = '192.168.1.202'
-destination_ipAddress = '172.224.42.53'
-source_port = '42992'
-destination_port = '60002'
-length = 1314
-flags = 0x010 
+class DistributedClass:
+    
+    # Define the host and the port number using the self attribute
+    def __init__(self, h, p):
+        self.host = h 
+        self.port = p
+        
+    # Start the broadcast to send the message to all clients 
+    def broadcast_message(self):
 
+        # Develop a socket for the master node 
+        socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
+        # Assign the IP address to the host and the port number to port
+        
+        # Bind the server with the IP address and a port number 
+        socket.bind((self.host, self.port))
+        
+        # The Master server is connected to four nodes 
+        socket.listen(4)
+        
+        # Print out the connections on the host and port number the server is listening
+        print("Listening for connections on " + host + ":" + "port...")
+        
+        # Make an empty list for clients
+        clients = [] 
+
+        try:
+            for i in range(4):
+                
+                # Master server accepts a connection requested from a client
+                client_socket, addr = socket.accept() 
+                print("Connection from " + addr + " established!")
+                
+                # Append the accepted connection to the client list 
+                clients.append(client_socket)
+            
+            # Broadcast a message amongst all clients 
+            for client in clients:
+                
+                # This line below confirms that all of the clients received the message
+                message = "A message received from the client!!!"
+                
+                # Send a message to all clients 
+                client.sendall(message)
+                
+        # After the broadcast ends, close all connections 
+        finally: 
+            
+            # Loop through the client list to close their connections
+            for client in clients:
+                client.close()
+            socket.close()
+      
+# Define the host and the port number  
+host = '0.0.0.0'
+port = 12345
+
+# Call the class to insert the host and the port
+DistributedClass(host, port)
 
 
 

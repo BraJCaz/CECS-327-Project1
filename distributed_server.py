@@ -1,47 +1,53 @@
-# we are first importing our socket in our distributed server
-# these are our references: 
-# https://stackoverflow.com/questions/48767851/making-a-distributed-computing-network-in-python
+
 import socket 
-import sys
 
 ## This is our distributed server as a class 
 class DistributedServer:
 
-    # now, we need to define both our host and port 
+    # Call the class constructor to pass in the parameters for the host and port 
     def __init__(self, host, port):
         self.host = host
         self.port = port 
         self.server_socket = None 
-
-    # we need to start our self code 
+        
+    #  Begin the server 
     def start(self):
+        
+        # Create a TCP/IP socket 
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
+        # Bind a socket to the designated address
         self.server_socket.bind((self.host, self.port))
+        
+        # Listens to all addresses simultainiously 
         self.server_socket.listen(8)
-        print(f"Server is starting on {self.host}:{self.port}")
+        
+        print("Server is starting on " + self.host + ":" + self.port)
 
-    # we need to handle our client from our starting server 
-    def handle_client(self, client_socket):
-        # This will define our logic to make sure our incoming client connections and messages 
-        message = client_socket.recv(1024).decode()
-        print(f"Message received: {message}")
+    # The starting server handles the client
+    def handle_client(self, c_socket):
+        
+        # These last two lines of code will make sure 
+        # that the message is received from the server
+        m = c_socket.recv(1024).decode()
+        print("Message received: " + m)
 
-        # this sends back a confirmation message 
-        confirm_message = "Message was successfully received!"
-        client_socket.send(confirm_message.encode())
+        # A message from the server has been verified! 
+        received_message = "Message was successfully received!"
+        c_socket.send(received_message.encode())
 
         # then, we need to further process both our protocols which can be added here
-        client_socket.close()
+        c_socket.close()
 
-        # we need to do another test run to find out if our client's connected to our distributed server 
+    # Find out to test whether if the client is connected to the distributed server 
     def run(self):
         self.start()
         while True:
-            client_socket, address = self.server_socket.accept()
-            print(f"Connection from {address}")
-            self.handle_client(client_socket)
+            c_socket, add = self.server_socket.accept()
+            print("Connection from " + add)
+            self.handle_client(add)
 
-    ## this is our main code to test our distributed server code 
+# Define the host and the port 
 host = '0.0.0.0'
 port = 8001
 server = DistributedServer(host, port)
