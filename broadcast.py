@@ -1,13 +1,12 @@
-'''
-    Meraj Nushin
-    CECS 327: Intro to Networks and Distributed Computing
-    Project 1: A Bite of Distributed Communication 
-    In this project, you will embark on the exciting journey of building 
-    a distributed system using Java/Python, Docker, and the Linux terminal. 
-    The project is divided into three main steps, each focusing on different 
-    aspects of system architecture, communication protocols, and network monitoring.
-'''
 
+'''
+References: 
+    Python Socket Programming Tutorial - https://www.youtube.com/watch?v=3QiPPX-KeSc
+    Python TCP Server Accepting Connections and Broadcasting Commands - 
+    https://stackoverflow.com/questions/41785969/python-tcp-server-accepting-connections-and-broadcasting-commands
+    TCP/IP Client and Server - https://pymotw.com/2/socket/tcp.html
+'''
+    
 import socket
 
 class DistributedClass:

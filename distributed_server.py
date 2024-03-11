@@ -1,4 +1,9 @@
-
+'''
+References: 
+    Python Socket Programming Tutorial - https://www.youtube.com/watch?v=3QiPPX-KeSc
+    Python TCP Server Accepting Connections and Broadcasting Commands - 
+    https://stackoverflow.com/questions/41785969/python-tcp-server-accepting-connections-and-broadcasting-commands
+    TCP/IP Client and Server - https://pymotw.com/2/socket/tcp.html'''
 import socket 
 
 ## This is our distributed server as a class 

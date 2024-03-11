@@ -1,13 +1,10 @@
-''' 
------------------------------------------------------------------------------------------------------------------------
+'''
 References: 
     Python Socket Programming Tutorial - https://www.youtube.com/watch?v=3QiPPX-KeSc
     Python TCP Server Accepting Connections and Broadcasting Commands - 
     https://stackoverflow.com/questions/41785969/python-tcp-server-accepting-connections-and-broadcasting-commands
     TCP/IP Client and Server - https://pymotw.com/2/socket/tcp.html
------------------------------------------------------------------------------------------------------------------------
 '''
-
 # Import these dependencies so that we can have the server to connect to a client
 import socket 
 import sys 
