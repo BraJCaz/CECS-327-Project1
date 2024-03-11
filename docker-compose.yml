@@ -25,12 +25,14 @@ services:
         dockerfile: simple_client 
       depends_on:
       - master 
+    # this is our third node 
     node3:
       build:
         context:
         dockerfile: simple_client
       depends_on:
       - master
+    # this is our fourth node 
     node4:
       build:
         context: 
